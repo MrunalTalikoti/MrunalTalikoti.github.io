@@ -13,7 +13,7 @@
 ### Website Preview
 <p align="center"> 
   <kbd>
-    <a href="https://vusi-kunene-matlou.github.io/" target="_blank"><img src="examples/preview.gif">
+    <a href="https://vusi-kunene-matlou.github.io/" target="_blank"><img src="VKM.gif">
   </a>
   </kbd>
 </p>
