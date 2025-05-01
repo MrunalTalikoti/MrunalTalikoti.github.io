@@ -539,6 +539,8 @@
   </div>
 </div>
 
+
+
           <!--PROJECT 3-->
           <!-- Flask Project -->
           <div class="col s12 m6 l4">
@@ -984,6 +986,29 @@
       backSpeed: 40
     });
   </script>
+
+<script>
+  // Set the launch date (yyyy, mm - 1, dd)
+  var launchDateProject2 = new Date(2025, 5, 15).getTime(); // Example: June 15, 2025
+
+  var countdownFunction2 = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = launchDateProject2 - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown-project2").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+    if (distance < 0) {
+      clearInterval(countdownFunction2);
+      document.getElementById("countdown-project2").innerHTML = "Launched!";
+    }
+  }, 1000);
+</script>
 
 
   <!-- jQuery-->
