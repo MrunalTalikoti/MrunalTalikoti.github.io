@@ -1006,28 +1006,35 @@
       })
     })
   </script>
-
 <script>
-  var launchDateProject2 = new Date(2025, 5, 15).getTime(); // Example: June 15, 2025
+  document.addEventListener("DOMContentLoaded", function () {
+    var launchDateProject2 = new Date(2025, 5, 15).getTime(); // June 15, 2025
 
-  var countdownFunction2 = setInterval(function () {
-    var now = new Date().getTime();
-    var distance = launchDateProject2 - now;
+    var countdownFunction2 = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = launchDateProject2 - now;
 
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById("countdown-project2").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+      var countdownEl = document.getElementById("countdown-project2");
+      if (countdownEl) {
+        countdownEl.innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+      }
 
-    if (distance < 0) {
-      clearInterval(countdownFunction2);
-      document.getElementById("countdown-project2").innerHTML = "Launched!";
-    }
-  }, 1000);
+      if (distance < 0) {
+        clearInterval(countdownFunction2);
+        if (countdownEl) {
+          countdownEl.innerHTML = "Launched!";
+        }
+      }
+    }, 1000);
+  });
 </script>
+
 
 
 </body>
