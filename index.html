@@ -508,7 +508,8 @@
       <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff;">
         <div style="font-size: 1.5rem; font-weight: bold;">Coming Soon</div>
         <div style="margin-top: 10px; font-size: 1rem;">
-          Launching in: <span id="countdown-project2" style="font-weight: bold;"></span>
+          Launching in: 
+          <span class="countdown-timer" data-launch-date="2025-09-15T00:00:00" style="font-weight: bold;"></span>
         </div>
       </div>
     </div>
@@ -520,8 +521,8 @@
       </p>
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text"><small>Accomplishments</small><i
-          class="mdi-navigation-close right"></i></span>
+      <span class="card-title grey-text"><small>Accomplishments</small>
+        <i class="mdi-navigation-close right"></i></span>
       <ul>
         <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite, Heroku</li>
         <li>Register/login to the web app (with OAuth-based Google Sign-In).</li>
@@ -1006,6 +1007,62 @@
       })
     })
   </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var launchDateProject2 = new Date(2025, 8, 15).getTime(); // June 15, 2025
+
+    var countdownFunction2 = setInterval(function () {
+      var now = new Date().getTime();
+      var distance = launchDateProject2 - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      var countdownEl = document.getElementById("countdown-project2");
+      if (countdownEl) {
+        countdownEl.innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+      }
+
+      if (distance < 0) {
+        clearInterval(countdownFunction2);
+        if (countdownEl) {
+          countdownEl.innerHTML = "Launched!";
+        }
+      }
+    }, 1000);
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const countdownElements = document.querySelectorAll(".countdown-timer");
+
+    countdownElements.forEach(el => {
+      const launchDate = new Date(el.dataset.launchDate).getTime();
+
+      const interval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        if (distance < 0) {
+          clearInterval(interval);
+          el.innerHTML = "Launched!";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        el.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }, 1000);
+    });
+  });
+</script>
 
 </body>
 
