@@ -16,6 +16,30 @@
       width: 160px;
       border-radius: 50%;
     }
+    .intro-bg {
+      background-color: #558b84;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .intro-bg h2 {
+      font-size: 3rem;
+    }
+    .intro-bg h5 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .intro-bg p {
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    .intro-bg .btn {
+      margin: 10px;
+    }
+    .project-img {
+      height: 200px;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
@@ -38,35 +62,13 @@
     </ul>
   </nav>
 
-  <section id="intro" class="section scrollspy full-height">
-    <div class="container">
-      <div class="row center-align">
-        <h2>Hi, I'm <span class="teal">Mary John</span></h2>
-        <h5>MS Business Analytics @ ASU | Data Analyst Intern @ KatBotz</h5>
-        <p>Solving real-world supply chain challenges using data and AI. Passionate about optimizing operations and telling stories through analytics.</p>
-        <div class="buttons">
-          <a href="#about" class="btn teal">About Me</a>
-          <a href="#contact" class="btn grey">Contact</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section scrollspy">
-    <div class="container">
-      <h3 class="teal-text">About</h3>
-      <p>I’m a data enthusiast with a background in statistics and experience in predictive modeling, machine learning, and operational analytics. I love blending technical insights with business strategy.</p>
-    </div>
-  </section>
-
-  <section id="experience" class="section scrollspy">
-    <div class="container">
-      <h3 class="teal-text">Experience</h3>
-      <ul>
-        <li><strong>KatBotz</strong> – Data Analyst Intern (May 2025 – Present)</li>
-        <li><strong>Arizona State University</strong> – Research Aide (Dec 2024 – Present)</li>
-        <li><strong>Digit Life Insurance</strong> – Executive Trainee, Actuarial Group (Jun 2023 – Jul 2024)</li>
-      </ul>
+  <section id="intro" class="intro-bg section scrollspy full-height">
+    <h2>Hi, I'm <span class="teal-text text-lighten-2">Mary John</span></h2>
+    <h5>MS Business Analytics @ ASU | Data Analyst Intern @ KatBotz</h5>
+    <p>Solving real-world supply chain challenges using data and AI. Passionate about optimizing operations and telling stories through analytics.</p>
+    <div class="buttons">
+      <a href="#about" class="btn white teal-text">Read More</a>
+      <a href="#contact" class="btn transparent white-text" style="border: 1px solid white;">Contact Me</a>
     </div>
   </section>
 
@@ -76,28 +78,34 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="card">
-            <div class="card-image"><img src="assets/img/tucson-pizza.png" alt="Tucson Pizza" /></div>
+            <div class="card-image">
+              <img src="assets/img/tucson-pizza.jpeg" alt="Tucson Pizza Review Analyzer" class="project-img">
+            </div>
             <div class="card-content">
               <span class="card-title">Tucson Pizza Review Analyzer</span>
-              <p>AI + NLP based Yelp review analyzer with BERT & LoRA fine-tuning</p>
+              <p>AI + NLP based Yelp review analyzer with BERT & LoRA fine-tuning.</p>
             </div>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="card">
-            <div class="card-image"><img src="assets/img/supply-chain-opt.png" alt="Supply Chain" /></div>
+            <div class="card-image">
+              <img src="assets/img/supply-chain-opt.jpeg" alt="Supply Chain Optimization" class="project-img">
+            </div>
             <div class="card-content">
               <span class="card-title">GenTech Supply Chain Optimization</span>
-              <p>Reduced cycle time by 15% using Tableau, Excel and Six Sigma techniques</p>
+              <p>Reduced cycle time by 15% using Tableau, Excel and Six Sigma techniques.</p>
             </div>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="card">
-            <div class="card-image"><img src="assets/img/mental-health.png" alt="Mental Health" /></div>
+            <div class="card-image">
+              <img src="assets/img/mental-health.jpeg" alt="Mental Health Prediction" class="project-img">
+            </div>
             <div class="card-content">
               <span class="card-title">Mental Health Risk Prediction</span>
-              <p>ML model analyzing factors influencing depression with logistic regression</p>
+              <p>ML model analyzing factors influencing depression with logistic regression.</p>
             </div>
           </div>
         </div>
@@ -105,67 +113,5 @@
     </div>
   </section>
 
-  <section id="skills" class="section scrollspy">
-    <div class="container">
-      <h3 class="teal-text">Skills</h3>
-      <p><strong>Languages & Tools:</strong> Python, R, SQL, Power BI, Tableau, Excel, SPSS</p>
-      <p><strong>Frameworks:</strong> TensorFlow, Keras, Flask</p>
-      <p><strong>Soft Skills:</strong> Communication, Analytical Thinking, Problem Solving</p>
-    </div>
-  </section>
-
-  <section id="education" class="section scrollspy">
-    <div class="container">
-      <h3 class="teal-text">Education</h3>
-      <ul>
-        <li>MS in Business Analytics – Arizona State University (2024–2025)</li>
-        <li>MS in Statistics – Christ University (2021–2023)</li>
-        <li>BSc in Economics, Math, Stats – Christ University (2018–2021)</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="certifications" class="section scrollspy">
-    <div class="container">
-      <h3 class="teal-text">Certifications</h3>
-      <ul>
-        <li>SAP IBP – Cloud Onboarding</li>
-        <li>Data Analysis with Python</li>
-        <li>SQL with Python</li>
-        <li>Introduction to Neuroeconomics</li>
-        <li>Mathematics for Economists</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="blog" class="section scrollspy">
-    <div class="container">
-      <h3 class="teal-text">Blog</h3>
-      <p>Coming soon: Explorations on AI in logistics, human-centered analytics, and data storytelling for decision makers.</p>
-    </div>
-  </section>
-
-  <section id="contact" class="section scrollspy">
-    <div class="container">
-      <h3 class="teal-text">Contact</h3>
-      <p>Email: mjohn28@asu.edu</p>
-      <p>Phone: (623) 273-0139</p>
-      <p><a href="https://www.linkedin.com/in/mary-john-4x11x2000/">LinkedIn</a> | <a href="https://github.com/marie4maria">GitHub</a></p>
-    </div>
-  </section>
-
-  <footer class="page-footer">
-    <div class="container center-align">
-      © 2025 Mary John — Built with ❤️ using GitHub Pages & Materialize CSS
-    </div>
-  </footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $(".scrollspy").scrollSpy();
-    });
-  </script>
 </body>
 </html>
