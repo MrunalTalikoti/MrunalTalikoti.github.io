@@ -514,6 +514,16 @@ a.hoverline:hover {
   height: auto;
 }
 
+.card.medium {
+  border: 2.2px solid rgba(200, 137, 230, 0.333);
+  transition: 0.3s ease-in-out;
+}
+
+.card.medium:hover {
+  transform: scale(1.01);
+  border-color:rgba(0, 0, 0, 0.5);
+}
+
 .card.medium .card-image {
   height: 240px;
 }
